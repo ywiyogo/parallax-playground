@@ -46,7 +46,37 @@ pnpm run dev
 
 For your invitation site, consider the action approach for easier expansion.
 
-## 🔧 Installation
+### Container Strategies
+
+#### 🔄 Global Container Approach
+
+Use a single scroll container for the entire page:
+
+```svelte
+<div bind:this={scrollContainer} class="main-container">
+  <!-- All parallax sections -->
+  <section><div use:scrollReveal={{ root: scrollContainer }}></div></section>
+  <section><div use:scrollReveal={{ root: scrollContainer }}></div></section>
+</div>
+```
+
+**Best for:** Full-page scrolling experiences with consistent behavior.
+
+#### 🎯 Modular Container Approach
+
+Each section has its own scroll container:
+
+```svelte
+{#each sections as section}
+  <div bind:this={section.container} class="section-wrapper">
+    <section><div use:scrollReveal={{ root: section.container }}></div></section>
+  </div>
+{/each}
+```
+
+**Best for:** Individual section scrolling (e.g., snap-scrolling layouts) or Svelte Components.
+
+## � Installation
 
 ```bash
 pnpm install
