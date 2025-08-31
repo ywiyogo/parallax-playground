@@ -4,10 +4,12 @@
   let {
     coupleName,
     guestName,
+    date,
     isGlobalScroll
   }: {
     coupleName: string;
     guestName: string;
+    date: string;
     isGlobalScroll: boolean;
   } = $props();
 
@@ -112,8 +114,8 @@
   <section class="h-screen bg-[url('./cover1.png')] bg-cover bg-local bg-center">
     <div class="p-8 text-white">
       <h2 class="text-3xl">The Wedding of {coupleName}</h2>
-      <p class="text-xl">10.10.2025</p>
-      <p class="text-xl">Dear {guestName}</p>
+      <p class="text-xl">{date}</p>
+      <p class="animate-pulse pt-2 text-2xl">Dear {guestName}</p>
     </div>
   </section>
 
@@ -127,9 +129,9 @@
       <p class="mb-4 text-xl font-light tracking-widest uppercase md:text-2xl">
         You are cordially invited to the wedding of
       </p>
-      <h2 class="mb-6 text-center text-4xl font-bold md:text-5xl">Sarah & Liam</h2>
+      <h2 class="mb-6 text-center text-4xl font-bold md:text-5xl">{coupleName}</h2>
       <p id="our-story-text" class="mb-6 text-center text-lg text-gray-700 md:text-xl">
-        June 15, 2025
+        {date}
       </p>
     </div>
   </section>

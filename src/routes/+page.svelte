@@ -27,7 +27,12 @@
           <p class="mt-1 text-center text-sm text-gray-600">~60 lines script</p>
         </div>
         <div class="flex flex-1 {isGlobalScroll ? '' : 'overflow-y-auto'}">
-          <Parallax coupleName="Yoe & Yu" guestName="Guest" {isGlobalScroll} />
+          <Parallax
+            coupleName="Sarah & Liam"
+            guestName="Guest"
+            date="10.10.2025"
+            {isGlobalScroll}
+          />
         </div>
       </div>
     </section>
@@ -40,7 +45,12 @@
           <p class="mt-1 text-center text-sm text-gray-600">~20 lines script</p>
         </div>
         <div class="flex flex-1 {isGlobalScroll ? '' : 'overflow-y-auto'}">
-          <ActionParallax coupleName="Yoe & Yu" guestName="Guest" {isGlobalScroll} />
+          <ActionParallax
+            coupleName="Sarah & Liam"
+            guestName="Guest"
+            date="June 15, 2025"
+            {isGlobalScroll}
+          />
         </div>
       </div>
     </section>
